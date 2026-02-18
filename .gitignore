@@ -1,0 +1,38 @@
+# Project folders - each has its own git repo
+*/.git
+projects/
+project/
+app/
+src/
+client/
+server/
+web/
+site/
+frontend/
+backend/
+
+
+# Common development folders that should have their own repos
+dist/
+build/
+coverage/
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+memory/
+face-mosaic-tool/
+streamer/
+portfolio/
+*.md
