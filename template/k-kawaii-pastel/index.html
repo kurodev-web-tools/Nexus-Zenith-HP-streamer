@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kawaii Pastel - Streamer HP</title>
+  <meta name="description" content="ゆめかわ・パステル・可愛い系VTuberのためのストリーマーHPテンプレート">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <!-- テーマCSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-kawaii" data-theme="k-kawaii">
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container header__inner">
+      <a href="#" class="logo">Kawaii</a>
+      
+      <!-- Liveバッジ（心臓アニメーション） -->
+      <div class="live-badge" data-stream-status="offline">
+        <span class="live-pulse">♥</span>
+        <span class="live-text">OFFLINE</span>
+      </div>
+      
+      <!-- ハンバーガーメニュー -->
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <!-- ナビゲーション -->
+    <nav class="nav" data-nav>
+      <ul class="nav__list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#schedule" class="nav__link">Schedule</a></li>
+        <li><a href="#links" class="nav__link">Links</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero__bg" id="aurora-bg"></div>
+      <div class="container hero__content">
+        <h1 class="hero__title" data-reveal>
+          <span class="hero__title-main">ゆめかわ</span>
+          <span class="hero__title-sub">ストリーマー</span>
+        </h1>
+        <p class="hero__tagline" data-reveal data-stagger="200">
+          癒しと笑顔をお届けします ♡
+        </p>
+        
+        <!-- SNSアイコン（ぷかぷか浮遊） -->
+        <div class="sns-icons" data-reveal data-stagger="400">
+          <a href="#" class="sns-icon magnetic" data-magnetic aria-label="YouTube">
+            <i data-lucide="youtube" class="sns-icon__svg"></i>
+          </a>
+          <a href="#" class="sns-icon magnetic" data-magnetic aria-label="Twitter">
+            <i data-lucide="twitter" class="sns-icon__svg"></i>
+          </a>
+          <a href="#" class="sns-icon magnetic" data-magnetic aria-label="Twitch">
+            <i data-lucide="twitch" class="sns-icon__svg"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section" data-reveal>
+      <div class="container">
+        <div class="about__card kawaii-card">
+          <div class="about__deco">
+            <span class="deco-star">✦</span>
+            <span class="deco-heart">💖</span>
+            <span class="deco-star">✦</span>
+          </div>
+          <h2 class="section__title">About Me</h2>
+          <div class="about__content">
+            <p class="about__text">
+              こんにちは！ゆめかわな配信をしています。
+            </p>
+            <div class="about__tags">
+              <span class="about__tag">🎮 ゲーム実況</span>
+              <span class="about__tag">💬 雑談</span>
+              <span class="about__tag">🎤 歌枠</span>
+            </div>
+            <p class="about__sub">を中心に活動中 ♪</p>
+          </div>
+          <div class="about__footer">
+            <span class="deco-line"></span>
+            <span class="deco-ribbon">🎀</span>
+            <span class="deco-line"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule section" data-reveal>
+      <div class="container">
+        <h2 class="section__title">
+          <i data-lucide="calendar-heart" class="section-icon"></i>
+          配信スケジュール
+        </h2>
+        <div class="schedule__wrapper">
+          <div class="schedule__item" data-reveal-child>
+            <div class="schedule__header">
+              <div class="schedule__day">月</div>
+              <div class="schedule__time">21:00〜</div>
+            </div>
+            <div class="schedule__body">
+              <span class="schedule__tag schedule__tag--chat">
+                <i data-lucide="message-circle" class="tag-icon"></i>
+                雑談
+              </span>
+            </div>
+          </div>
+          
+          <div class="schedule__item" data-reveal-child data-stagger="100">
+            <div class="schedule__header">
+              <div class="schedule__day">水</div>
+              <div class="schedule__time">20:00〜</div>
+            </div>
+            <div class="schedule__body">
+              <span class="schedule__tag schedule__tag--game">
+                <i data-lucide="gamepad-2" class="tag-icon"></i>
+                ゲーム
+              </span>
+            </div>
+          </div>
+          
+          <div class="schedule__item" data-reveal-child data-stagger="200">
+            <div class="schedule__header">
+              <div class="schedule__day">土</div>
+              <div class="schedule__time">14:00〜</div>
+            </div>
+            <div class="schedule__body">
+              <span class="schedule__tag schedule__tag--song">
+                <i data-lucide="music" class="tag-icon"></i>
+                歌枠
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links" class="links section" data-reveal>
+      <div class="container">
+        <h2 class="section__title">
+          <i data-lucide="heart" class="section-icon"></i>
+          Follow Me
+        </h2>
+        <div class="links__wrapper">
+          <a href="#" class="link-card magnetic" data-magnetic>
+            <span class="link-card__icon link-card__icon--youtube">
+              <i data-lucide="youtube"></i>
+            </span>
+            <span class="link-card__name">YouTube</span>
+            <span class="link-card__arrow">
+              <i data-lucide="external-link"></i>
+            </span>
+          </a>
+          
+          <a href="#" class="link-card magnetic" data-magnetic>
+            <span class="link-card__icon link-card__icon--twitter">
+              <i data-lucide="twitter"></i>
+            </span>
+            <span class="link-card__name">Twitter</span>
+            <span class="link-card__arrow">
+              <i data-lucide="external-link"></i>
+            </span>
+          </a>
+          
+          <a href="#" class="link-card magnetic" data-magnetic>
+            <span class="link-card__icon link-card__icon--twitch">
+              <i data-lucide="twitch"></i>
+            </span>
+            <span class="link-card__name">Twitch</span>
+            <span class="link-card__arrow">
+              <i data-lucide="external-link"></i>
+            </span>
+          </a>
+          
+          <a href="#" class="link-card magnetic" data-magnetic>
+            <span class="link-card__icon link-card__icon--booth">
+              <i data-lucide="shopping-bag"></i>
+            </span>
+            <span class="link-card__name">Booth</span>
+            <span class="link-card__arrow">
+              <i data-lucide="external-link"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copy">(c) 2025 Kawaii Streamer. All rights reserved.</p>
+      <p class="footer__portal">
+        <a href="#"><i data-lucide="arrow-left"></i> テンプレート一覧へ</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- 共通JS -->
+  <script src="../../assets/js/premium-effects.js"></script>
+  <script src="../../assets/js/template-common.js"></script>
+  
+  <!-- Lucide Icons 初期化 -->
+  <script>
+    lucide.createIcons();
+  </script>
+  
+  <!-- テーマ別JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Aurora背景
+      PremiumEffects.Aurora('#aurora-bg', {
+        colors: ['#FFB6C1', '#E6E6FA', '#FFD700'],
+        speed: 0.5
+      });
+      
+      // MagneticButton（SNSアイコン）
+      PremiumEffects.MagneticButton('.magnetic', {
+        sensitivity: 0.3
+      });
+    });
+  </script>
+</body>
+</html>
