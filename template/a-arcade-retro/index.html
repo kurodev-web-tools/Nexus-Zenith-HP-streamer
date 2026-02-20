@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcade Retro - Streamer HP</title>
+  <meta name="description" content="80-90年代アーケード風・レトロゲーム配信者のためのストリーマーHP">
+  
+  <!-- Google Fonts - ピクセルフォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  
+  <!-- テーマCSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-arcade">
+  
+  <!-- 走査線オーバーレイ -->
+  <div class="scanlines" aria-hidden="true"></div>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo pixel-text">ARCADE</a>
+      
+      <!-- Liveバッジ（PLAYER 1 READY） -->
+      <div class="live-badge" data-stream-status="offline">
+        <span class="live-text">PLAYER 1 READY</span>
+      </div>
+      
+      <!-- ハンバーガーメニュー -->
+      <button class="nav__toggle" data-nav-toggle aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <nav class="nav" data-nav>
+      <ul class="nav__list">
+        <li><a href="#stage-select" class="nav__link pixel-text">STAGE</a></li>
+        <li><a href="#score" class="nav__link pixel-text">SCORE</a></li>
+        <li><a href="#schedule" class="nav__link pixel-text">SCHEDULE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="container hero__content">
+        <!-- ピクセルキャラ（CSSで表現） -->
+        <div class="pixel-char" aria-hidden="true"></div>
+        
+        <h1 class="hero__title">
+          <span class="hero__title-main pixel-text">RETRO</span>
+          <span class="hero__title-sub pixel-text">STREAMER</span>
+        </h1>
+        
+        <p class="hero__blink pixel-text">INSERT COIN</p>
+        
+        <!-- SNSアイコン -->
+        <div class="sns-icons">
+          <a href="#" class="sns-icon" aria-label="YouTube">📺</a>
+          <a href="#" class="sns-icon" aria-label="Twitter">🐦</a>
+          <a href="#" class="sns-icon" aria-label="Twitch">🎮</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stage Select -->
+    <section id="stage-select" class="stage-select section">
+      <div class="container">
+        <h2 class="section__title pixel-text">STAGE SELECT</h2>
+        
+        <div class="stage-grid">
+          <div class="stage-card" data-cursor>
+            <span class="stage__num pixel-text">1-1</span>
+            <span class="stage__name pixel-text">ABOUT</span>
+          </div>
+          <div class="stage-card" data-cursor>
+            <span class="stage__num pixel-text">1-2</span>
+            <span class="stage__name pixel-text">SCHEDULE</span>
+          </div>
+          <div class="stage-card" data-cursor>
+            <span class="stage__num pixel-text">1-3</span>
+            <span class="stage__name pixel-text">LINKS</span>
+          </div>
+        </div>
+        
+        <!-- カーソル -->
+        <div class="cursor-select">▶</div>
+      </div>
+    </section>
+
+    <!-- Score Board -->
+    <section id="score" class="score section">
+      <div class="container">
+        <h2 class="section__title pixel-text">HIGH SCORE</h2>
+        
+        <div class="score-board">
+          <div class="score__item">
+            <span class="score__rank pixel-text">1ST</span>
+            <span class="score__name pixel-text">SUBSCRIBERS</span>
+            <span class="score__value pixel-text">99999</span>
+          </div>
+          <div class="score__item">
+            <span class="score__rank pixel-text">2ND</span>
+            <span class="score__name pixel-text">STREAMS</span>
+            <span class="score__value pixel-text">500+</span>
+          </div>
+          <div class="score__item">
+            <span class="score__rank pixel-text">3RD</span>
+            <span class="score__name pixel-text">HOURS</span>
+            <span class="score__value pixel-text">1000+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule" class="schedule section">
+      <div class="container">
+        <h2 class="section__title pixel-text">GAME SCHEDULE</h2>
+        
+        <div class="schedule__grid">
+          <div class="schedule__item">
+            <div class="schedule__day pixel-text">MON</div>
+            <div class="schedule__time pixel-text">20:00</div>
+            <div class="schedule__game pixel-text">RETRO GAME</div>
+          </div>
+          <div class="schedule__item">
+            <div class="schedule__day pixel-text">WED</div>
+            <div class="schedule__time pixel-text">21:00</div>
+            <div class="schedule__game pixel-text">SPEEDRUN</div>
+          </div>
+          <div class="schedule__item">
+            <div class="schedule__day pixel-text">SAT</div>
+            <div class="schedule__time pixel-text">14:00</div>
+            <div class="schedule__game pixel-text">GAME A DAY</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section id="links" class="links section">
+      <div class="container">
+        <h2 class="section__title pixel-text">CONTINUE?</h2>
+        
+        <div class="links__grid">
+          <a href="#" class="link-btn pixel-text">
+            <span class="link-btn__icon">📺</span>
+            <span class="link-btn__text">YOUTUBE</span>
+          </a>
+          <a href="#" class="link-btn pixel-text">
+            <span class="link-btn__icon">🐦</span>
+            <span class="link-btn__text">TWITTER</span>
+          </a>
+          <a href="#" class="link-btn pixel-text">
+            <span class="link-btn__icon">🎮</span>
+            <span class="link-btn__text">TWITCH</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="pixel-text">© 2025 ARCADE STREAMER</p>
+      <p class="footer__coin pixel-text">CREDIT 00</p>
+    </div>
+  </footer>
+
+  <!-- 共通JS -->
+  <script src="../../assets/js/premium-effects.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  
+  <!-- Shooting Starsエフェクト -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // LED風スター
+      new PremiumEffects.ShootingStars('.hero', {
+        frequency: 5000,
+        color: 'rgba(255, 242, 0, 0.8)',
+        trailLength: 100
+      });
+    });
+  </script>
+
+</body>
+</html>
