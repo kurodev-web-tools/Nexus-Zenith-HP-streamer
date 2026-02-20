@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cyber Grid - テクノロジーストリーマー専用プロフィール">
+  <title>CYBER | Enter the Grid</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-cyber" data-stream-status="offline">
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+  
+  <!-- Ambient Background -->
+  <div class="bg-ambient" aria-hidden="true"></div>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <span class="logo-text glitch" data-text="CYBER">CYBER</span>
+        <span class="live-indicator" data-stream-status-indicator>
+          <span class="live-dot"></span>
+          <span class="live-text">&gt; LIVE</span>
+        </span>
+      </a>
+      
+      <nav class="main-nav" role="navigation" aria-label="メインメニュー">
+        <ul>
+          <li><a href="#terminal">Terminal</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="glitch" data-text="Enter the Grid">Enter the Grid</span>
+        </h1>
+        <p class="hero-subtitle">System initialized... Welcome to the digital frontier</p>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value" data-count="1337">0</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count="42">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" data-count="9001">0</span>
+            <span class="stat-label">Commits</span>
+          </div>
+        </div>
+        
+        <div class="hero-actions">
+          <a href="#links" class="btn-primary glitch-hover">
+            <span class="material-icons">play_arrow</span>
+            <span>CONNECT</span>
+          </a>
+          <button class="btn-secondary" data-action="open-channel" disabled>
+            <span class="material-icons">radio_button_checked</span>
+            <span>WATCH LIVE</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span class="scroll-text">SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+    
+    <!-- Terminal Section -->
+    <section class="terminal-section" id="terminal">
+      <div class="section-container">
+        <h2 class="section-title">System Log</h2>
+        
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">terminal@cyber-grid:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command typing-text">whoami</span>
+            </div>
+            <div class="terminal-line output">
+              <span>coder_streamer | Tech Enthusiast | Digital Nomad</span>
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command typing-text">cat ./interests.txt</span>
+            </div>
+            <div class="terminal-line output">
+              <span>Competitive Programming, Reverse Engineering, CTF</span>
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">$</span>
+              <span class="command typing-text">ls ./platforms/</span>
+            </div>
+            <div class="terminal-line output">
+              <span>Twitch/  YouTube/  GitHub/  Discord/</span>
+            </div>
+            <div class="terminal-line cursor-line">
+              <span class="prompt">$</span>
+              <span class="cursor">_</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Schedule Section -->
+    <section class="schedule-section" id="schedule">
+      <div class="section-container">
+        <h2 class="section-title">Broadcast Schedule</h2>
+        <p class="section-subtitle">Next transmissions from the grid</p>
+        
+        <div class="schedule-grid">
+          <article class="schedule-card glass-surface">
+            <div class="card-spotlight"></div>
+            <div class="schedule-day">MON</div>
+            <div class="schedule-time">20:00 - 22:00</div>
+            <div class="schedule-title">Algorithm Study</div>
+            <div class="schedule-type">
+              <span class="type-tag">Learning</span>
+            </div>
+          </article>
+          
+          <article class="schedule-card glass-surface">
+            <div class="card-spotlight"></div>
+            <div class="schedule-day">WED</div>
+            <div class="schedule-time">21:00 - 23:00</div>
+            <div class="schedule-title">CTF Challenge</div>
+            <div class="schedule-type">
+              <span class="type-tag accent">Hacking</span>
+            </div>
+          </article>
+          
+          <article class="schedule-card glass-surface">
+            <div class="card-spotlight"></div>
+            <div class="schedule-day">FRI</div>
+            <div class="schedule-time">22:00 - 24:00</div>
+            <div class="schedule-title">Code Review</div>
+            <div class="schedule-type">
+              <span class="type-tag">Review</span>
+            </div>
+          </article>
+          
+          <article class="schedule-card glass-surface featured">
+            <div class="card-spotlight"></div>
+            <div class="schedule-day">SAT</div>
+            <div class="schedule-time">19:00 - 23:00</div>
+            <div class="schedule-title">Project Dev</div>
+            <div class="schedule-type">
+              <span class="type-tag primary">Main Stream</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Links Section -->
+    <section class="links-section" id="links">
+      <div class="section-container">
+        <h2 class="section-title">Networks</h2>
+        <p class="section-subtitle">Connect to the grid</p>
+        
+        <div class="links-grid">
+          <a href="https://twitch.tv" target="_blank" rel="noopener" class="link-card hologram">
+            <div class="link-glow"></div>
+            <span class="link-icon">📺</span>
+            <span class="link-name">Twitch</span>
+            <span class="link-handle">@cyber_streamer</span>
+          </a>
+          
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="link-card hologram">
+<a href="https://youtube.com" target="_blank" rel="noopener" class="link-card hologram">
+            <div class="link-glow"></div>
+            <span class="link-icon">▶️</span>
+            <span class="link-name">YouTube</span>
+            <span class="link-handle">@cyber_channel</span>
+          </a>
+          
+          <a href="https://github.com" target="_blank" rel="noopener" class="link-card hologram">
+            <div class="link-glow"></div>
+            <span class="link-icon">💻</span>
+            <span class="link-name">GitHub</span>
+            <span class="link-handle">@cyber_dev</span>
+          </a>
+          
+          <a href="https://discord.com" target="_blank" rel="noopener" class="link-card hologram">
+            <div class="link-glow"></div>
+            <span class="link-icon">💬</span>
+            <span class="link-name">Discord</span>
+            <span class="link-handle">Cyber Grid</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <span class="brand-name">CYBER</span> GRID <span class="copyright">© 2026</span>
+    </div>
+  </footer>
+  
+  <!-- Common Scripts -->
+  <script src="../../assets/js/premium-effects.js"></script>
+  <script src="../../assets/js/template-common.js"></script>
+  
+  <!-- Template Scripts -->
+  <script>
+    // Initialize Particles for Hero Background
+    const particlesEffect = new PremiumEffects.Particles('.hero-bg', {
+      color: 'rgba(0, 242, 255, 0.5)',
+      limit: 80,
+      speed: 0.3
+    });
+    
+    // Initialize CountUp for Stats
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const finalValue = parseInt(target.dataset.count);
+          let current = 0;
+          const duration = 2000;
+          const step = Math.max(1, Math.floor(finalValue / (duration / 16)));
+          
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= finalValue) {
+              current = finalValue;
+              clearInterval(timer);
+            }
+            target.textContent = current.toLocaleString();
+          }, 16);
+          
+          statObserver.unobserve(target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    document.querySelectorAll('[data-count]').forEach(el => {
+      statObserver.observe(el);
+    });
+    
+    // Header scroll effect
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
