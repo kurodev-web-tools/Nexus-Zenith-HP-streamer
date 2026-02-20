@@ -651,6 +651,51 @@
 }
 
 /* =========================================
+   Container Utilities
+   ========================================= */
+.theme-arcade .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section base */
+.theme-arcade .section {
+  position: relative;
+}
+
+/* Korean text support */
+.pixel-text:lang(ko) {
+  word-break: keep-all;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .theme-arcade .nav__link:hover,
+  .theme-arcade .stage-card:hover,
+  .theme-arcade .link-btn:hover {
+    border-color: white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scanlines,
+  .theme-arcade .live-badge[data-stream-status="live"],
+  .theme-arcade .hero__title-main,
+  .theme-arcade .hero__blink,
+  .theme-arcade .cursor-select,
+  .theme-arcade .footer__coin {
+    animation: none;
+  }
+  
+  .theme-arcade .pixel-char {
+    animation: none;
+  }
+}
+
+/* =========================================
    Responsive
    ========================================= */
 @media (max-width: 768px) {
