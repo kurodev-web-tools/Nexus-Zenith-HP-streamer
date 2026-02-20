@@ -1,0 +1,699 @@
+/* =========================================
+   Arcade Retro Theme CSS
+   80-90年代アーケード・レトロゲーム風
+   ========================================= */
+
+/* Theme Variables Override */
+.theme-arcade {
+  --color-primary: #FF0055;
+  --color-secondary: #00F2FF;
+  --color-accent: #FFE600;
+  --color-bg: #000000;
+  --color-text: #FFFFFF;
+  --color-text-muted: #888888;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-hover: rgba(255, 255, 255, 0.1);
+  --color-border: rgba(255, 255, 255, 0.2);
+}
+
+/* Pixel Font Class */
+.pixel-text {
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+/* =========================================
+   CRT Scanlines Effect
+   ========================================= */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+  animation: scanline-scroll 0.1s linear infinite;
+}
+
+@keyframes scanline-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+/* =========================================
+   Header
+   ========================================= */
+.theme-arcade .header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--color-primary);
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+.theme-arcade .header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Logo */
+.theme-arcade .logo {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  text-shadow:
+    2px 2px 0px var(--color-secondary),
+    4px 4px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.theme-arcade .logo:hover {
+  text-shadow:
+    2px 2px 0px var(--color-secondary),
+    4px 4px 0px rgba(0, 0, 0, 0.5),
+    0 0 20px var(--color-primary);
+}
+
+/* Live Badge (Player 1 Ready) */
+.theme-arcade .live-badge {
+  background: var(--color-surface);
+  border: 2px solid var(--color-text-muted);
+  padding: 0.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-arcade .live-badge[data-stream-status="live"] {
+  border-color: var(--color-accent);
+  animation: live-pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 230, 0, 0.4); }
+  50% { box-shadow: 0 0 20px 5px rgba(255, 230, 0, 0.6); }
+}
+
+.theme-arcade .live-text {
+  font-size: 0.6rem;
+  color: var(--color-text);
+}
+
+/* Mobile Menu Toggle */
+.theme-arcade .nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.theme-arcade .nav__toggle span {
+  width: 24px;
+  height: 3px;
+  background: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+/* Navigation */
+.theme-arcade .nav {
+  position: fixed;
+  top: 70px;
+  right: -100%;
+  width: 250px;
+  height: calc(100vh - 70px);
+  background: rgba(0, 0, 0, 0.95);
+  border-left: 2px solid var(--color-primary);
+  transition: right 0.3s ease;
+  padding: 2rem;
+}
+
+.theme-arcade .nav.is-open {
+  right: 0;
+}
+
+.theme-arcade .nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.theme-arcade .nav__link {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  padding: 0.5rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.theme-arcade .nav__link:hover {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+  text-shadow: 2px 2px 0px var(--color-primary);
+}
+
+@media (min-width: 769px) {
+  .theme-arcade .nav__toggle {
+    display: none;
+  }
+
+  .theme-arcade .nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .theme-arcade .nav__list {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .theme-arcade .nav__link {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-arcade .nav__toggle {
+    display: flex;
+  }
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+.theme-arcade .hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center, rgba(255, 0, 85, 0.1) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(0, 242, 255, 0.1) 0%, transparent 50%),
+    var(--color-bg);
+  padding: 6rem 1.5rem 3rem;
+}
+
+.theme-arcade .hero__content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Pixel Character (CSS Only) */
+.theme-arcade .pixel-char {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  background:
+    /* Body */
+    linear-gradient(var(--color-primary), var(--color-primary)) 25px 30px / 30px 35px no-repeat,
+    /* Head */
+    linear-gradient(var(--color-secondary), var(--color-secondary)) 30px 15px / 20px 20px no-repeat,
+    /* Eyes */
+    linear-gradient(var(--color-bg), var(--color-bg)) 35px 20px / 5px 5px no-repeat,
+    linear-gradient(var(--color-bg), var(--color-bg)) 45px 20px / 5px 5px no-repeat,
+    /* Arms */
+    linear-gradient(var(--color-text), var(--color-text)) 10px 35px / 10px 20px no-repeat,
+    linear-gradient(var(--color-text), var(--color-text)) 60px 35px / 10px 20px no-repeat,
+    /* Legs */
+    linear-gradient(var(--color-accent), var(--color-accent)) 25px 70px / 10px 10px no-repeat,
+    linear-gradient(var(--color-accent), var(--color-accent)) 45px 70px / 10px 10px no-repeat;
+  image-rendering: pixelated;
+  animation: char-bounce 1s ease-in-out infinite;
+}
+
+@keyframes char-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Hero Title */
+.theme-arcade .hero__title {
+  margin-bottom: 1.5rem;
+}
+
+.theme-arcade .hero__title-main {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-shadow:
+    3px 3px 0px var(--color-secondary),
+    6px 6px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+  animation: title-glow 2s ease-in-out infinite;
+}
+
+.theme-arcade .hero__title-sub {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  text-shadow:
+    2px 2px 0px var(--color-primary),
+    4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes title-glow {
+  0%, 100% {
+    text-shadow:
+      3px 3px 0px var(--color-secondary),
+      6px 6px 0px rgba(0, 0, 0, 0.5),
+      0 0 10px var(--color-primary);
+  }
+  50% {
+    text-shadow:
+      3px 3px 0px var(--color-secondary),
+      6px 6px 0px rgba(0, 0, 0, 0.5),
+      0 0 30px var(--color-primary),
+      0 0 60px var(--color-primary);
+  }
+}
+
+/* Insert Coin Blinking */
+.theme-arcade .hero__blink {
+  font-size: 1rem;
+  color: var(--color-accent);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  animation: blink 1s step-end infinite;
+  margin-bottom: 2rem;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* SNS Icons */
+.theme-arcade .sns-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.theme-arcade .sns-icon {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: 2px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.theme-arcade .sns-icon:hover {
+  border-color: var(--color-primary);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+/* =========================================
+   Stage Select Section
+   ========================================= */
+.theme-arcade .stage-select {
+  padding: 4rem 1.5rem;
+  background: var(--color-bg);
+}
+
+.theme-arcade .section__title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-secondary);
+  text-shadow:
+    2px 2px 0px var(--color-primary),
+    4px 4px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.theme-arcade .section__title::before,
+.theme-arcade .section__title::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-accent);
+  font-size: 0.8rem;
+}
+
+.theme-arcade .section__title::before {
+  left: -2rem;
+}
+
+.theme-arcade .section__title::after {
+  right: -2rem;
+}
+
+.theme-arcade .stage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.theme-arcade .stage-card {
+  background: var(--color-surface);
+  border: 3px solid var(--color-border);
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-arcade .stage-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.theme-arcade .stage-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(255, 0, 85, 0.3);
+}
+
+.theme-arcade .stage-card:hover::before {
+  left: 100%;
+}
+
+.theme-arcade .stage__num {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.theme-arcade .stage__name {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Selection Cursor */
+.theme-arcade .cursor-select {
+  position: fixed;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: cursor-blink 0.5s step-end infinite;
+}
+
+.theme-arcade .cursor-select.is-visible {
+  opacity: 1;
+}
+
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* =========================================
+   Score Board Section
+   ========================================= */
+.theme-arcade .score {
+  padding: 4rem 1.5rem;
+  background:
+    linear-gradient(180deg, var(--color-bg) 0%, rgba(255, 0, 85, 0.05) 50%, var(--color-bg) 100%);
+}
+
+.theme-arcade .score-board {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 3px solid var(--color-border);
+  padding: 1rem;
+}
+
+.theme-arcade .score__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 2px dashed var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.theme-arcade .score__item:last-child {
+  border-bottom: none;
+}
+
+.theme-arcade .score__item:hover {
+  background: var(--color-surface-hover);
+}
+
+.theme-arcade .score__rank {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  min-width: 50px;
+}
+
+.theme-arcade .score__name {
+  flex: 1;
+  font-size: 0.7rem;
+  color: var(--color-text);
+}
+
+.theme-arcade .score__value {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================
+   Schedule Section
+   ========================================= */
+.theme-arcade .schedule {
+  padding: 4rem 1.5rem;
+  background: var(--color-bg);
+}
+
+.theme-arcade .schedule__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.theme-arcade .schedule__item {
+  background: var(--color-surface);
+  border: 3px solid var(--color-border);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.theme-arcade .schedule__item::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid var(--color-primary);
+  border-right: 3px solid var(--color-primary);
+}
+
+.theme-arcade .schedule__item::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+}
+
+.theme-arcade .schedule__item:hover {
+  border-color: var(--color-primary);
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 0, 85, 0.2);
+}
+
+.theme-arcade .schedule__day {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.theme-arcade .schedule__time {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.theme-arcade .schedule__game {
+  font-size: 0.8rem;
+  color: var(--color-text);
+}
+
+/* =========================================
+   Links Section
+   ========================================= */
+.theme-arcade .links {
+  padding: 4rem 1.5rem;
+  background:
+    radial-gradient(ellipse at center, rgba(0, 242, 255, 0.05) 0%, transparent 70%),
+    var(--color-bg);
+}
+
+.theme-arcade .links__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.theme-arcade .link-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-surface);
+  border: 3px solid var(--color-border);
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-arcade .link-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.theme-arcade .link-btn:hover {
+  border-color: var(--color-primary);
+  background: var(--color-surface-hover);
+  transform: translateX(10px);
+}
+
+.theme-arcade .link-btn:hover::before {
+  left: 100%;
+}
+
+.theme-arcade .link-btn__icon {
+  font-size: 1.5rem;
+}
+
+.theme-arcade .link-btn__text {
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+.theme-arcade .footer {
+  padding: 2rem 1.5rem;
+  background: var(--color-bg);
+  border-top: 2px solid var(--color-border);
+  text-align: center;
+}
+
+.theme-arcade .footer p {
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.theme-arcade .footer__coin {
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 768px) {
+  .theme-arcade .hero__title-main {
+    font-size: 1.8rem;
+  }
+
+  .theme-arcade .hero__title-sub {
+    font-size: 1rem;
+  }
+
+  .theme-arcade .hero__blink {
+    font-size: 0.8rem;
+  }
+
+  .theme-arcade .stage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-arcade .score__item {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .theme-arcade .schedule__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-arcade .links__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-arcade .pixel-text {
+    font-size: 0.7rem;
+    line-height: 1.6;
+  }
+
+  .theme-arcade .section__title::before,
+  .theme-arcade .section__title::after {
+    display: none;
+  }
+
+  .theme-arcade .link-btn {
+    justify-content: center;
+  }
+}
