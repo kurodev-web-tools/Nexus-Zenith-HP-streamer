@@ -1,0 +1,118 @@
+/* Ninja Shadow Theme CSS */
+
+:root {
+    --ninja-bg-primary: #0A0A0F;
+    --ninja-bg-secondary: #12121A;
+    --ninja-bg-tertiary: #1A1A24;
+    --ninja-shadow-red: #FF2D55;
+    --ninja-moon-purple: #9747FF;
+    --ninja-silver: #A8A8B3;
+    
+    --color-primary: var(--ninja-shadow-red);
+    --color-text: #E8E8EC;
+    --color-text-muted: #8A8A95;
+    --color-bg: var(--ninja-bg-primary);
+    --color-surface: var(--ninja-bg-secondary);
+    --color-border: rgba(255, 255, 255, 0.1);
+    
+    --font-heading: 'Noto Serif JP', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body.theme-ninja {
+    background: var(--ninja-bg-primary);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Shadow Background */
+.shadow-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.shadow-layer {
+    position: absolute;
+    inset: -50%;
+    opacity: 0.3;
+    filter: blur(100px);
+    animation: shadow-move 20s ease-in-out infinite;
+}
+
+.shadow-1 { background: radial-gradient(circle at 30% 50%, rgba(151,71,255,0.4), transparent 50%); }
+.shadow-2 { background: radial-gradient(circle at 70% 30%, rgba(255,45,85,0.3), transparent 60%); animation-delay: -7s; }
+.shadow-3 { background: radial-gradient(circle at 50% 80%, rgba(0,0,0,0.6), transparent 70%); animation-delay: -14s; }
+
+@keyframes shadow-move {
+    0%, 100% { transform: translate(0,0) rotate(0deg); }
+    33% { transform: translate(5%,5%) rotate(120deg); }
+    66% { transform: translate(-5%,3%) rotate(240deg); }
+}
+
+/* Smoke */
+.smoke-particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(200,200,210,0.1), transparent);
+    border-radius: 50%;
+    filter: blur(8px);
+    animation: smoke-float 15s ease-in-out infinite;
+}
+
+@keyframes smoke-float {
+    0% { transform: translateY(100vh) translateX(0) scale(0.5); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-100px) translateX(100px) scale(2); opacity: 0; }
+}
+
+/* Header */
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: all 0.3s; border-bottom: 1px solid transparent; }
+.site-header.scrolled { background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); border-bottom-color: var(--color-border); }
+.header-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.logo-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: linear-gradient(45deg, var(--ninja-shadow-red), var(--ninja-moon-purple)); border-radius: 50%; color: white; font-size: 1.2rem; box-shadow: 0 0 20px rgba(255,45,85,0.4); }
+.logo-text { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.15em; color: var(--color-text); font-family: var(--font-heading); }
+
+.main-nav ul { display: flex; gap: 2rem; list-style: none; }
+.main-nav a { color: var(--color-text); text-decoration: none; font-size: 0.9rem; font-weight: 500; position: relative; transition: color 0.3s; }
+.main-nav a:hover { color: var(--ninja-shadow-red); }
+
+/* Hero */
+.hero-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 8rem 2rem 4rem; overflow: hidden; }
+.hero-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,45,85,0.15), transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; animation: hero-pulse 4s ease-in-out infinite; }
+@keyframes hero-pulse { 0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); } }
+
+.hero-content { text-align: center; z-index: 10; max-width: 800px; }
+.hero-badge { display: inline-flex; padding: 0.5rem 1rem; background: rgba(255,45,85,0.1); border: 1px solid rgba(255,45,85,0.3); border-radius: 100px; margin-bottom: 2rem; }
+.badge-text { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; color: var(--ninja-shadow-red); }
+
+.hero-title { margin: 0 0 1.5rem; }
+.title-line { display: block; font-family: var(--font-heading); font-weight: 900; line-height: 1.1; }
+.title-ninja { font-size: clamp(3rem, 8vw, 6rem); color: var(--color-text); letter-spacing: 0.15em; }
+.title-shadow { font-size: clamp(2.5rem, 6vw, 5rem); background: linear-gradient(90deg, var(--ninja-shadow-red), var(--ninja-moon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.3em; }
+
+.hero-subtitle { font-size: 1.25rem; color: var(--color-text-muted); margin: 0 0 3rem; font-weight: 300; letter-spacing: 0.1em; }
+
+.hero-actions { display: flex; gap: 1rem; justify-content: center; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: linear-gradient(135deg, var(--ninja-shadow-red), var(--ninja-moon-purple)); color: white; text-decoration: none; border-radius: 100px; font-weight: 600; letter-spacing: 0.1em; transition: all 0.3s; border: none; cursor: pointer; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(255,45,85,0.4); }
+
+/* Profile */
+.section { padding: 6rem 2rem; position: relative; }
+.section-container { max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-title { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: var(--color-text); margin: 0 0 0.5rem; }
+.section-subtitle { color: var(--color-text-muted); font-size: 1rem; }
+
+.profile-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 16px; padding: 3rem; text-align: center; max-width: 600px; margin: 0 auto; }
+.avatar-frame { width: 120px; height: 120px; margin: 0 auto 1.5rem; border-radius: 50%; padding: 4px; background: linear-gradient(135deg, var(--ninja-shadow-red), var(--ninja-moon-purple)); }
+.avatar-inner { width: 100%; height: 100%; border-radius: 50%; background: var(--ninja-bg-tertiary); }
+.streamer-name { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--color-text); margin: 0 0 0.5rem; }
+.streamer-role { color: var(--ninja-shadow-red); font-size: 0.9rem; margin-bottom: 1rem; }
+.profile-bio { color: var(--color-text-muted); line-height: 1.8; }
