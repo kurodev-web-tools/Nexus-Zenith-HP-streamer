@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dragon Fang - 格闘ゲームストリーマー専用テンプレート">
+  <title>DRAGON FANG | Battle Ready</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Common CSS -->
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dragon-fang" data-stream-status="offline">
+  
+  <!-- Flame Background Effect -->
+  <div class="flame-bg" aria-hidden="true"></div>
+  <div class="flame-rising" aria-hidden="true"></div>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo-dragon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2L4 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-8-5z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="logo-text">DRAGON</span>
+          <span class="logo-sub">FANG</span>
+        </div>
+        <span class="live-indicator" data-stream-status-indicator>
+          <span class="live-dot"></span>
+          <span class="live-text">FIGHTING</span>
+        </span>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="main-nav" role="navigation" aria-label="メインメニュー">
+        <ul>
+          <li><a href="#battle">BATTLE</a></li>
+          <li><a href="#gauge">POWER</a></li>
+          <li><a href="#links">ARENA</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <!-- Hero Section with Tilt Effect -->
+    <section class="hero-section" id="hero">
+      <div class="hero-tilt-container" data-tilt>
+        <div class="hero-tilt-bg">
+          <div class="hero-pattern"></div>
+          <div class="hero-glow"></div>
+        </div>
+      </div>
+      
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-line">
+            <span class="claw-mark">爪痕</span>
+            襲来
+          </span>
+          <span class="title-accent">DRAGON AWAITS</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          格闘ゲーム配信者のための<br>
+          究極のバトルステージ
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#links" class="btn-magnetic" data-magnetic>
+            <span class="btn-text">ENTER ARENA</span>
+            <span class="btn-icon material-icons">sports_mma</span>
+          </a>
+          <button class="btn-watch" data-action="open-channel" disabled>
+            <span class="material-icons">videocam</span>
+            <span>WATCH LIVE</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+    
+    <!-- Power Gauge Section -->
+    <section class="gauge-section" id="gauge">
+      <div class="section-container">
+        <h2 class="section-title">BATTLE POWER</h2>
+        
+        <div class="power-gauge-container">
+          <div class="gauge-label">
+            <span>HP</span>
+            <span class="gauge-value">9999</span>
+          </div>
+          <div class="power-gauge">
+            <div class="gauge-bar" style="width: 85%;"></div>
+            <div class="gauge-shine"></div>
+          </div>
+          <div class="gauge-effects">
+            <div class="effect-item active">
+              <span class="effect-icon">🔥</span>
+              <span class="effect-name">攻撃UP</span>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">⚡</span>
+              <span class="effect-name">スピードUP</span>
+            </div>
+            <div class="effect-item">
+              <span class="effect-icon">🛡️</span>
+              <span class="effect-name">防御UP</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="battle-stats">
+          <div class="stat-card" data-magnetic>
+            <div class="stat-icon material-icons">emoji_events</div>
+            <div class="stat-number" data-count="237">0</div>
+            <div class="stat-label">VICTORIES</div>
+          </div>
+          <div class="stat-card" data-magnetic>
+            <div class="stat-icon material-icons">local_fire_department</div>
+            <div class="stat-number" data-count="89">0</div>
+            <div class="stat-label">WIN STREAK</div>
+          </div>
+          <div class="stat-card featured" data-magnetic>
+            <div class="stat-icon material-icons">star</div>
+            <div class="stat-number" data-count="15">0</div>
+            <div class="stat-label">PERFECT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Battle Links Section -->
+    <section class="links-section" id="links">
+      <div class="section-container">
+        <h2 class="section-title">BATTLE ARENA</h2>
+        <p class="section-subtitle">Choose your platform</p>
+        
+        <div class="links-grid">
+          <a href="#" target="_blank" rel="noopener" class="link-card" data-magnetic>
+            <div class="link-bg"></div>
+            <div class="link-content">
+              <span class="link-platform">YouTube</span>
+              <span class="link-name main-stream">MAIN STREAM</span>
+            </div>
+            <div class="link-arrow material-icons">arrow_forward</div>
+          </a>
+          
+          <a href="#" target="_blank" rel="noopener" class="link-card" data-magnetic>
+            <div class="link-bg"></div>
+            <div class="link-content">
+              <span class="link-platform">Twitch</span>
+              <span class="link-name">LIVE BATTLES</span>
+            </div>
+            <div class="link-arrow material-icons">arrow_forward</div>
+          </a>
+          
+          <a href="#" target="_blank" rel="noopener" class="link-card" data-magnetic>
+            <div class="link-bg"></div>
+            <div class="link-content">
+              <span class="link-platform">Twitter</span>
+              <span class="link-name">BATTLE LOG</span>
+            </div>
+            <div class="link-arrow material-icons">arrow_forward</div>
+          </a>
+          
+          <a href="#" target="_blank" rel="noopener" class="link-card" data-magnetic>
+            <div class="link-bg"></div>
+            <div class="link-content">
+              <span class="link-platform">Discord</span>
+              <span class="link-name">GUILD HALL</span>
+            </div>
+            <div class="link-arrow material-icons">arrow_forward</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">DRAGON</span>
+        <span class="footer-sub">FANG</span>
+      </div>
+      <p class="copyright">© 2026 Dragon Fang Template</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="../../assets/js/premium-effects.js"></script>
+  <script src="../../assets/js/template
