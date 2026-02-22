@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ether Fluid - 幻想的な歌枠ストリーマー専用プロフィール">
+    <title>ETHER | Fluid Dreams</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-ether" data-stream-status="offline">
+    <!-- Liquid Background -->
+    <div class="liquid-bg" aria-hidden="true">
+        <div class="liquid-blob blob-1"></div>
+        <div class="liquid-blob blob-2"></div>
+        <div class="liquid-blob blob-3"></div>
+        <div class="liquid-blob blob-4"></div>
+    </div>
+    
+    <!-- Ambient Background -->
+    <div class="bg-ambient" aria-hidden="true"></div>
+    
+    <!-- Floating Particles -->
+    <div class="floating-particles" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="brand">
+                <span class="logo-text">ETHER</span>
+                <span class="live-indicator" data-stream-status-indicator>
+                    <span class="live-dot"></span>
+                    <span class="live-text">LIVE</span>
+                </span>
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="メインメニュー">
+                <ul>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#songs">Songs</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#links">Links</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="hero-content">
+                <div class="hero-avatar">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-inner">
+                        <i class="fas fa-music"></i>
+                    </div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Fluid</span>
+                    <span class="title-line">Dreams</span>
+                </h1>
+                <p class="hero-subtitle">歌声は水のように、心に溶けてゆく</p>
+                <div class="hero-tags">
+                    <span class="tag">#歌枠</span>
+                    <span class="tag">#癒やし</span>
+                    <span class="tag">#幻想</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#links" class="btn-primary">
+                        <i class="fas fa-play"></i>
+                        <span>Listen</span>
+                    </a>
+                    <button class="btn-secondary" data-action="open-channel" disabled>
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Watch Live</span>
+                    </button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text">Scroll</span>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section class="profile-section" id="profile">
+            <div class="section-container">
+                <h2 class="section-title">Profile</h2>
+                <div class="profile-content">
+                    <div class="profile-card glass-ether">
+                        <div class="card-shine"></div>
+                        <div class="profile-header">
+                            <div class="profile-icon">
+                                <i class="fas fa-cloud-moon"></i>
+                            </div>
+                            <h3 class="profile-name">Ether Singer</h3>
+                            <p class="profile-role">歌枠配信者 / Fantasy Vocalist</p>
+                        </div>
+                        <div class="profile-bio">
+                            <p>幻想的な世界観で紡ぐ歌枠配信。</p>
+                            <p>アニソン・ボカロ・癒し系オリジナル曲を中心に、心に寄り添う時間をお届けします。</p>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" data-count="2847">0</span>
+                                <span class="stat-label">Followers</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" data-count="156">0</span>
+                                <span class="stat-label">Songs</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" data-count="520">0</span>
+                                <span class="stat-label">Streams</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Songs Section -->
+        <section class="songs-section" id="songs">
+            <div class="section-container">
+                <h2 class="section-title">Songs</h2>
+                <p class="section-subtitle">あなたの心に響くメロディー</p>
+                <div class="songs-grid">
+                    <article class="song-card glass-ether">
+                        <div class="song-wave"></div>
+                        <div class="song-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="song-info">
+                            <h3 class="song-title">星の雫</h3>
+                            <p class="song-artist">オリジナル曲</p>
+                        </div>
+                        <span class="song-tag">癒し系</span>
+                    </article>
+                    <article class="song-card glass-ether featured">
+                        <div class="song-wave"></div>
+                        <div class="song-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="song-info">
+                            <h3 class="song-title">廻廻奇譚</h3>
+                            <p class="song-artist">Cover</p>
+                        </div>
+                        <span class="song-tag">人気</span>
+                    </article>
+                    <article class="song-card glass-ether">
+                        <div class="song-wave"></div>
+                        <div class="song-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="song-info">
+                            <h3 class="song-title">君の神様になりたい</h3>
+                            <p class="song-artist">Cover</p>
+                        </div>
+                        <span class="song-tag">ボカロ</span>
+                    </article>
+                    <article class="song-card glass-ether">
+                        <div class="song-wave"></div>
+                        <div class="song-icon">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <div class="song-info">
+                            <h3 class="song-title">明日への手紙</h3>
+                            <p class="song-artist">Cover</p>
+                        </div>
+                        <span class="song-tag">アニソン</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section class="schedule-section" id="schedule">
+            <div class="section-container">
+                <h2 class="section-title">Schedule</h2>
+                <p class="section-subtitle">配信スケジュール</p>
+                <div class="schedule-grid">
+                    <article class="schedule-card glass-ether">
+                        <div class="schedule-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="schedule-day">月曜日</div>
+                        <div class="schedule-time">21:00 - 23:00</div>
+                        <div class="schedule-title">癒しの歌枠</div>
+                        <p class="schedule-desc">リクエストOK・癒し系中心</p>
+                    </article>
+                    <article class="schedule-card glass-ether">
+                        <div class="schedule-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="schedule-day">水曜日</div>
+                        <div class="schedule-time">20:00 - 22:00</div>
+                        <div class="schedule-title">ボカロ縛り</div>
+                        <p class="schedule-desc">人気ボカロ曲・懐メロ</p>
+                    </article>
+                    <article class="schedule-card glass-ether featured">
+                        <div class="schedule-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="schedule-day">金曜日</div>
+                        <div class="schedule-time">21:00 - 24:00</div>
+                        <div class="schedule-title">週末大歌枠</div>
+                        <p class="schedule-desc">メイン配信・3時間スペシャル</p>
+                    </article>
+                    <article class="schedule-card glass-ether">
+                        <div class="schedule-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="schedule-day">土曜日</div>
+                        <div class="schedule-time">不定期</div>
+                        <div class="schedule-title">ゲリラ歌枠</div>
+                        <p class="schedule-desc">突撃配信・お楽しみに</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links Section -->
+        <section class="links-section" id="links">
+            <div class="section-container">
+                <h2 class="section-title">Links</h2>
+                <p class="section-subtitle">各種リンク</p>
+                <div class="links-grid">
+                    <a href="https://twitch.tv" target="_blank" rel="noopener" class="link-card glass-ether">
+                        <span class="link-icon"><i class="fab fa-twitch"></i></span>
+                        <span class="link-name">Twitch</span>
+                        <span class="link-handle">@ether_singer</span>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" class="link-card glass-ether">
+                        <span class="link-icon"><i class="fab fa-youtube"></i></span>
+                        <span class="link-name">YouTube</span>
+                        <span class="link-handle">Ether Ch.</span>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" class="link-card glass-ether">
+                        <span class="link-icon"><i class="fab fa-twitter"></i></span>
+                        <span class="link-name">Twitter</span>
+                        <span class="link-handle">@ether_vocal</span>
+                    </a>
+                    <a href="https://discord.com" target="_blank" rel="noopener" class="link-card glass-ether">
+                        <span class="link-icon"><i class="fab fa-discord"></i></span>
+                        <span class="link-name">Discord</span>
+                        <span class="link-handle">Ether's Room</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span class="footer-text">ETHER - Fluid Dreams</span>
+            <span class="footer-copy">© 2026</span>
+        </div>
+    </footer>
+
+    <!-- Common Scripts -->
+    <script src="../../assets/js/premium-effects.js"></script>
+    <script src="../../assets/js/template-common.js"></script>
+    
+    <!-- Template Scripts -->
+    <script>
+        // Header scroll effect
+        const header = document.querySelector('.site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // CountUp animation for stats
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalValue = parseInt(target.dataset.count);
+                    let current = 0;
+                    const duration = 2000;
+                    const step = Math.max(1, Math.floor(finalValue / (duration / 16)));
+                    
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= finalValue) {
+                            current = finalValue;
+                            clearInterval(timer);
+                        }
+                        target.textContent = current.toLocaleString();
+                    }, 16);
+                    
+                    statObserver.unobserve(target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('[data-count]').forEach(el => {
+            statObserver.observe(el);
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
