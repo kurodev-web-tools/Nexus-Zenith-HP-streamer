@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Voyager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-galaxy" data-stream-status="offline">
+    <div class="galaxy-bg" aria-hidden="true">
+        <div class="nebula"></div>
+        <div class="stars"></div>
+    </div>
+    <div class="stars-container" aria-hidden="true"></div>
+    
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="brand">
+                <span class="logo-planet"><i class="fas fa-globe"></i></span>
+                <span class="logo-text">VOYAGER</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Bridge</a></li>
+                    <li><a href="#starmap">Star Map</a></li>
+                    <li><a href="#orbit">Orbit</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#links">Links</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="globe-container" aria-hidden="true">
+                <div class="globe">
+                    <div class="globe-ring ring-1"></div>
+                    <div class="globe-ring ring-2"></div>
+                    <div class="globe-ring ring-3"></div>
+                    <div class="globe-core"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon"><i class="fas fa-rocket"></i></span>
+                    <span class="badge-text">COSMIC STREAMER</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-galaxy">GALAXY</span>
+                    <span class="title-voyager">VOYAGER</span>
+                </h1>
+                <p class="hero-subtitle">宇宙の彼方へ、配信の旅へ</p>
+                <div class="hero-actions">
+                    <a href="#starmap" class="btn-primary">
+                        <i class="fas fa-compass"></i> LAUNCH
+                    </a>
+                </div>
+            </div>
+            <div class="orbit-decoration" aria-hidden="true">
+                <div class="orbit-path path-1"></div>
+                <div class="orbit-path path-2"></div>
+            </div>
+        </section>
+        
+        <section class="section starmap-section" id="starmap">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-icon"><i class="fas fa-star-map"></i></span>
+                    <h2 class="section-title">Star Map</h2>
+                    <p class="section-subtitle">惑星と星系のガイド</p>
+                </div>
+                <div class="starmap-grid">
+                    <div class="planet-card">
+                        <div class="planet-icon"><i class="fas fa-globe-americas"></i></div>
+                        <h3 class="planet-name">Earth</h3>
+                        <p class="planet-desc">地道な配信拠点</p>
+                        <div class="planet-stats">
+                            <span><i class="fas fa-users"></i> 1.2K</span>
+                            <span><i class="fas fa-video"></i> 156</span>
+                        </div>
+                    </div>
+                    <div class="planet-card featured">
+                        <div class="planet-icon"><i class="fas fa-sun"></i></div>
+                        <h3 class="planet-name">Solaris</h3>
+                        <p class="planet-desc">本拠地・メイン配信</p>
+                        <div class="planet-stats">
+                            <span><i class="fas fa-users"></i> 5.6K</span>
+                            <span><i class="fas fa-video"></i> 532</span>
+                        </div>
+                    </div>
+                    <div class="planet-card">
+                        <div class="planet-icon"><i class="fas fa-moon"></i></div>
+                        <h3 class="planet-name">Luna</h3>
+                        <p class="planet-desc">夜の雑談配信</p>
+                        <div class="planet-stats">
+                            <span><i class="fas fa-users"></i> 890</span>
+                            <span><i class="fas fa-video"></i> 98</span>
+                        </div>
+                    </div>
+                    <div class="planet-card">
+                        <div class="planet-icon"><i class="fas fa-meteor"></i></div>
+                        <h3 class="planet-name">Nebula</h3>
+                        <p class="planet-desc">ゲーム実況</p>
+                        <div class="planet-stats">
+                            <span><i class="fas fa-users"></i> 2.3K</span>
+                            <span><i class="fas fa-video"></i> 203</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section orbit-section" id="orbit">
+            <div class="section-container">
+                <div class="orbit-display">
+                    <div class="orbit-center">
+                        <div class="center-planet"></div>
+                        <div class="orbit-ring ring-outer"></div>
+                        <div class="orbit-ring ring-middle"></div>
+                        <div class="orbit-ring ring-inner"></div>
+                        <div class="satellite sat-1"><i class="fas fa-satellite"></i></div>
+                        <div class="satellite sat-2"><i class="fas fa-satellite-dish"></i></div>
+                        <div class="satellite sat-3"><i class="fas fa-space-shuttle"></i></div>
+                    </div>
+                    <div class="orbit-info">
+                        <h2 class="section-title">Orbit Activity</h2>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <span class="activity-icon"><i class="fas fa-broadcast-tower"></i></span>
+                                <span class="activity-text">配信中</span>
+                                <span class="activity-status online">LIVE</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon"><i class="fas fa-satellite"></i></span>
+                                <span class="activity-text">衛星通信</span>
+                                <span class="activity-status">正常</span>
+                            </div>
+                            <div class="activity-item">
+                                <span class="activity-icon"><i class="fas fa-rocket"></i></span>
+                                <span class="activity-text">宇宙船状態</span>
+                                <span class="activity-status">準備完了</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section schedule-section" id="schedule">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-icon"><i class="fas fa-calendar-alt"></i></span>
+                    <h2 class="section-title">Mission Schedule</h2>
+                    <p class="section-subtitle">航行予定</p>
+                </div>
+                <div class="schedule-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">MON 20:00</div>
+                            <h4>深宇宙探査</h4>
+                            <p>宇宙系ゲーム</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker active"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">WED 21:00</div>
+                            <h4>星間通信</h4>
+                            <p>雑談配信</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">SAT 19:00</div>
+                            <h4>銀河大会議</h4>
+                            <p>視聴者参加型</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section links-section" id="links">
+            <div class="section-container">
+                <div class="links-galaxy">
+                    <h2 class="section-title">Transmission</h2>
+                    <div class="links-grid">
+                        <a href="#" class="link-card">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="#" class="link-card">
+                            <i class="fab fa-twitch"></i>
+                            <span>Twitch</span>
+                        </a>
+                        <a href="#" class="link-card">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="link-card">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <p class="footer-text">To infinity and beyond</p>
+        <p class="footer-copy">2024 Galaxy Voyager</p>
+    </footer>
+    
+    <script src="../../assets/js/premium-effects.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script>
+        const header = document.querySelector('.site-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.pageYOffset > 50);
+        });
+        
+        // Shooting stars
+        function createShootingStar() {
+            const container = document.querySelector('.stars-container');
+            const star = document.createElement('div');
+            star.className = 'shooting-star';
+            star.style.top = Math.random() * 50 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.animationDuration = (Math.random() * 2 + 1) + 's';
+            star.style.animationDelay = Math.random() + 's';
+            container.appendChild(star);
+            setTimeout(() => star.remove(), 3000);
+        }
+        setInterval(createShootingStar, 2000);
+        
+        // Orbiting satellites
+        document.querySelectorAll('.satellite').forEach((sat, i) => {
+            sat.style.animationDelay = (i * 5) + 's';
+        });
+    </script>
+</body>
+</html>
