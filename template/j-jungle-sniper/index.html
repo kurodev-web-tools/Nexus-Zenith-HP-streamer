@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Sniper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-jungle" data-stream-status="offline">
+    <div class="jungle-bg" aria-hidden="true"></div>
+    <div class="scope-lines" aria-hidden="true"></div>
+    
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="brand">
+                <i class="fas fa-crosshairs"></i>
+                <span class="logo-text">SNIPER</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">CC</a></li>
+                    <li><a href="#mission">MISSION</a></li>
+                    <li><a href="#arsenal">ARSENAL</a></li>
+                    <li><a href="#schedule">SCHED</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="scope-overlay" aria-hidden="true">
+                <div class="crosshair"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">TACTICAL STREAMER</div>
+                <h1 class="hero-title">JUNGLE<br><span>SNIPER</span></h1>
+                <p class="hero-subtitle">One Shot. One Kill. No Exceptions.</p>
+                <a href="#mission" class="btn-mission">DEPLOY</a>
+            </div>
+        </section>
+        
+        <section class="section mission-section" id="mission">
+            <div class="section-container">
+                <h2 class="section-title">ACTIVE MISSIONS</h2>
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon"><i class="fas fa-crosshairs"></i></div>
+                        <h3>Head Hunter</h3>
+                        <p>100 Headshots Challenge</p>
+                        <span class="status active">ACTIVE</span>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Jungle Survival</h3>
+                        <p>7 Days No Death Run</p>
+                        <span class="status">PENDING</span>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Recon Op</h3>
+                        <p>Stealth Campaign</p>
+                        <span class="status completed">DONE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section arsenal-section" id="arsenal">
+            <div class="section-container">
+                <h2 class="section-title">ARSENAL</h2>
+                <div class="arsenal-list">
+                    <div class="arsenal-item">
+                        <span class="arsenal-num">01</span>
+                        <span class="arsenal-name">Tactical Setup</span>
+                        <span class="arsenal-spec">High Precision Build</span>
+                    </div>
+                    <div class="arsenal-item">
+                        <span class="arsenal-num">02</span>
+                        <span class="arsenal-name">Stealth Gear</span>
+                        <span class="arsenal-spec">Camo + Suppressor</span>
+                    </div>
+                    <div class="arsenal-item">
+                        <span class="arsenal-num">03</span>
+                        <span class="arsenal-name">Spotter Kit</span>
+                        <span class="arsenal-spec">Drone + Range Finder</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section schedule-section" id="schedule">
+            <div class="section-container">
+                <h2 class="section-title">OP SCHEDULE</h2>
+                <div class="schedule-list">
+                    <div class="schedule-row">
+                        <span class="day">MON</span>
+                        <span class="time">2000</span>
+                        <span class="op">Sniper Training</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="day">WED</span>
+                        <span class="time">2100</span>
+                        <span class="op">Campaign Mission</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="day">FRI</span>
+                        <span class="time">2000</span>
+                        <span class="op">PvP Combat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <p>STAY SHARP. STAY HIDDEN.</p>
+    </footer>
+    
+    <script src="../../assets/js/premium-effects.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script>
+        const header = document.querySelector('.site-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.pageYOffset > 50);
+        });
+    </script>
+</body>
+</html>
