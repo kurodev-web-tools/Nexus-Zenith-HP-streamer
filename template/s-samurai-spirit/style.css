@@ -1,0 +1,686 @@
+/* S - Samurai Spirit Theme CSS - Japanese Bushido Style */
+
+:root {
+    --samurai-crimson: #DC143C;
+    --samurai-gold: #FFD700;
+    --samurai-black: #000000;
+    --samurai-white: #FFFFFF;
+    --samurai-gray: #888888;
+    --samurai-paper: #F5F5DC;
+    --samurai-ink: #1A1A1A;
+    --font-samurai: 'Noto Serif JP', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.theme-samurai {
+    background: var(--samurai-black);
+    color: var(--samurai-white);
+    font-family: var(--font-samurai);
+    overflow-x: hidden;
+}
+
+/* Background */
+.samurai-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.dark-void {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(220, 20, 60, 0.1) 0%, transparent 70%);
+}
+
+.ink-texture {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Sakura Container */
+.sakura-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.sakura-petal {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(135deg, #FFB7C5 0%, #FFC0CB 100%);
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(45deg);
+    animation: sakura-fall linear forwards;
+}
+
+@keyframes sakura-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg) translateX(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(220, 20, 60, 0.3);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--samurai-white);
+}
+
+.logo-katana {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px rgba(220, 20, 60, 0.5));
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--samurai-crimson);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.main-nav a {
+    color: var(--samurai-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--samurai-crimson);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--samurai-crimson);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--samurai-white);
+    transition: all 0.3s ease;
+}
+
+/* Hero */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(220,20,60,0.1));
+}
+
+.slash-effect {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--samurai-crimson), transparent);
+    transform: translateY(-50%) scaleX(0);
+    opacity: 0;
+}
+
+.slash-effect.slash-animate {
+    animation: slash-cut 0.8s ease-out forwards;
+}
+
+@keyframes slash-cut {
+    0% { transform: translateY(-50%) scaleX(0); opacity: 1; }
+    50% { transform: translateY(-50%) scaleX(1); opacity: 1; }
+    100% { transform: translateY(-50%) scaleX(1.5); opacity: 0; }
+}
+
+.hero-content {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--samurai-gold);
+    color: var(--samurai-gold);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    margin-bottom: 1.5rem;
+}
+
+.title-main {
+    display: block;
+    font-size: clamp(4rem, 15vw, 10rem);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: var(--samurai-white);
+    text-shadow: 0 0 40px rgba(220, 20, 60, 0.5);
+    line-height: 1;
+}
+
+.title-sub {
+    display: block;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0.5em;
+    color: var(--samurai-crimson);
+    margin-top: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--samurai-gray);
+    letter-spacing: 0.3em;
+    margin-bottom: 3rem;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 3rem;
+    background: transparent;
+    color: var(--samurai-white);
+    border: 2px solid var(--samurai-crimson);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--samurai-crimson);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    transform: translateX(0);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 30px rgba(220, 20, 60, 0.5);
+}
+
+/* Sections */
+.section {
+    padding: 8rem 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-icon {
+    font-size: 2rem;
+    color: var(--samurai-crimson);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--samurai-gray);
+    letter-spacing: 0.2em;
+}
+
+/* Scroll Paper */
+.scroll-paper {
+    background: var(--samurai-paper);
+    color: var(--samurai-ink);
+    padding: 4rem;
+    border: 4px solid #8B4513;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.scroll-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.scroll-icon {
+    font-size: 3rem;
+    color: var(--samurai-crimson);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.scroll-paper .section-title {
+    color: var(--samurai-ink);
+    margin-bottom: 2rem;
+}
+
+/* Dojo Stats */
+.dojo-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 900;
+    color: var(--samurai-crimson);
+    font-family: var(--font-samurai);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--samurai-ink);
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+.slash-divider {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--samurai-crimson), transparent);
+    margin: 2rem 0;
+}
+
+.achievements-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--samurai-ink);
+}
+
+.achievement-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--samurai-crimson);
+    color: var(--samurai-ink);
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+}
+
+/* Mission Section */
+.mission-section {
+    background: linear-gradient(180deg, var(--samurai-black), rgba(220, 20, 60, 0.05));
+}
+
+.mission-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(220, 20, 60, 0.3);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+    border-color: var(--samurai-crimson);
+    box-shadow: 0 0 30px rgba(220, 20, 60, 0.2);
+    transform: translateY(-5px);
+}
+
+.mission-seal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: var(--samurai-crimson);
+    color: var(--samurai-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+.mission-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--samurai-gold);
+    letter-spacing: 0.1em;
+}
+
+.mission-desc {
+    color: var(--samurai-gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.mission-status {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--samurai-crimson);
+    color: var(--samurai-crimson);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+}
+
+/* Schedule Section */
+.schedule-scroll {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(220, 20, 60, 0.2);
+    padding: 3rem;
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+    background: rgba(220, 20, 60, 0.05);
+}
+
+.schedule-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.date-day {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--samurai-crimson);
+}
+
+.date-time {
+    font-size: 0.875rem;
+    color: var(--samurai-gray);
+}
+
+.schedule-content h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: var(--samurai-white);
+}
+
+.schedule-content p {
+    color: var(--samurai-gray);
+    font-size: 0.875rem;
+}
+
+.schedule-status {
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--samurai-crimson);
+    color: var(--samurai-crimson);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+}
+
+.schedule-status.live {
+    background: var(--samurai-crimson);
+    color: var(--samurai-white);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Links Section */
+.links-section {
+    background: linear-gradient(180deg, rgba(220, 20, 60, 0.05), var(--samurai-black));
+}
+
+.links-dojo {
+    text-align: center;
+}
+
+.links-dojo .section-title {
+    margin-bottom: 3rem;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(220, 20, 60, 0.3);
+    color: var(--samurai-white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-card i {
+    font-size: 2rem;
+    color: var(--samurai-crimson);
+    transition: all 0.3s ease;
+}
+
+.link-card span {
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+}
+
+.link-card:hover {
+    border-color: var(--samurai-crimson);
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+    transform: translateY(-3px);
+}
+
+.link-card:hover i {
+    color: var(--samurai-gold);
+    transform: scale(1.1);
+}
+
+/* Footer */
+.site-footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(220, 20, 60, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+.footer-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    color: var(--samurai-crimson);
+    margin-bottom: 1rem;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: var(--samurai-gray);
+    letter-spacing: 0.2em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .section {
+        padding: 5rem 1.5rem;
+    }
+    
+    .scroll-paper {
+        padding: 2rem;
+    }
+    
+    .dojo-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .schedule-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .schedule-status {
+        margin-left: 0;
+    }
+    
+    .achievement-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
