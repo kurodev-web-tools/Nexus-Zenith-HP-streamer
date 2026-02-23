@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-zen-master" data-stream-status="offline">
+    <div class="zen-bg" aria-hidden="true">
+        <div class="ink-wash ink-1"></div>
+        <div class="ink-wash ink-2"></div>
+        <div class="void-center"></div>
+    </div>
+    <div class="smoke-container" aria-hidden="true"></div>
+    
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="brand">
+                <span class="logo-void"></span>
+                <span class="logo-text">無</span>
+            </a>
+            <nav class="main-nav">
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="hero-void">
+                <div class="mu-character">
+                    <span class="mu-ink">無</span>
+                    <div class="ink-spread"></div>
+                </div>
+                <p class="hero-whisper">静寂の中に、全てがある</p>
+            </div>
+        </section>
+        
+        <section class="section haiku-section" id="haiku">
+            <div class="section-container">
+                <div class="haiku-card">
+                    <div class="ink-brush"></div>
+                    <p class="haiku-line">古池や</p>
+                    <p class="haiku-line">蛙飛び込む</p>
+                    <p class="haiku-line">水の音</p>
+                    <span class="haiku-author">— 松尾芭蕉</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section enlightenment-section" id="enlightenment">
+            <div class="section-container">
+                <div class="enlightenment-void">
+                    <div class="koan-text">
+                        <p class="koan-question">两手拍ぬると一拍となる</p>
+                        <p class="koan-answer">一手拍ぬるときは、なに音ぜん</p>
+                    </div>
+                    <div class="circle-enso">
+                        <svg viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="#000" stroke-width="2" class="enso-circle"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section schedule-section" id="schedule">
+            <div class="section-container">
+                <h2 class="section-title-minimal">配信予定</h2>
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <span class="schedule-time">静</span>
+                        <span class="schedule-content">瞑想配信</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="schedule-time">寂</span>
+                        <span class="schedule-content">集中ゲーム</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span class="schedule-time">無</span>
+                        <span class="schedule-content">雑談配信</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section links-section" id="links">
+            <div class="section-container">
+                <div class="links-void">
+                    <a href="#" class="zen-link">
+                        <span class="link-text">YouTube</span>
+                        <span class="link-void"></span>
+                    </a>
+                    <a href="#" class="zen-link">
+                        <span class="link-text">Twitch</span>
+                        <span class="link-void"></span>
+                    </a>
+                    <a href="#" class="zen-link">
+                        <span class="link-text">Twitter</span>
+                        <span class="link-void"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <p class="footer-text">無所有、無所住</p>
+    </footer>
+    
+    <script src="../../assets/js/premium-effects.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script>
+        const header = document.querySelector('.site-header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.pageYOffset > 50);
+        });
+        
+        // Incense smoke animation
+        function createSmoke() {
+            const container = document.querySelector('.smoke-container');
+            const smoke = document.createElement('div');
+            smoke.className = 'smoke-wisp';
+            smoke.style.left = Math.random() * 100 + 'vw';
+            smoke.style.animationDuration = (Math.random() * 5 + 8) + 's';
+            smoke.style.opacity = Math.random() * 0.15 + 0.05;
+            container.appendChild(smoke);
+            setTimeout(() => smoke.remove(), 13000);
+        }
+        setInterval(createSmoke, 2000);
+        
+        // Ink spread animation on load
+        document.querySelector('.mu-ink').addEventListener('animationend', function() {
+            document.querySelector('.ink-spread').classList.add('spread-complete');
+        });
+    </script>
+</body>
+</html>
