@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lava Flow</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-lava" data-stream-status="offline">
+<div class="lava-bg" aria-hidden="true"></div><div class="ember-container" aria-hidden="true"></div>
+<header class="site-header"><div class="header-inner"><a href="#" class="brand"><i class="fas fa-fire"></i><span>LAVA</span></a><nav class="main-nav"><ul><li><a href="#hero">TOP</a></li><li><a href="#volcano">VOLCANO</a></li><li><a href="#heat">HEAT</a></li><li><a href="#schedule">TIME</a></li></ul></nav></div></header>
+<main><section class="hero-section" id="hero"><div class="hero-content"><div class="hero-badge">EXTREME STREAM</div><h1 class="hero-title">LAVA<br><span>FLOW</span></h1><p class="hero-subtitle">情熱の溶岩が全てを飲み込む</p><a href="#volcano" class="btn-lava">ENTER THE HEAT</a></div></section>
+<section class="section volcano-section" id="volcano"><div class="section-container"><h2 class="section-title">VOLCANO</h2><div class="volcano-stats"><div class="stat"><span class="num" data-count="999">0</span>°C HEAT</div><div class="stat"><span class="num" data-count="100">0</span>% PASSION</div></div></div></section>
+<section class="section schedule-section" id="schedule"><div class="section-container"><h2 class="section-title">ERUPTION SCHED</h2><div class="sched-list"><div class="sched-item"><span>TUE 20:00</span><span>High Difficulty</span><span class="live">LIVE</span></div><div class="sched-item"><span>THU 21:00</span><span>Challenge Run</span><span>SOON</span></div></div></div></section></main>
+<footer class="site-footer"><p>THE HEAT NEVER DIES</p></footer>
+<script src="../../assets/js/premium-effects.js"></script><script src="../../assets/js/common.js"></script>
+<script>const header=document.querySelector('.site-header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.pageYOffset>50));function createEmber(){const c=document.querySelector('.ember-container');const e=document.createElement('div');e.className='ember';e.style.left=Math.random()*100+'vw';e.style.animationDuration=(Math.random()*2+3)+'s';c.appendChild(e);setTimeout(()=>e.remove(),5000)}setInterval(createEmber,400);</script>
+</body></html>

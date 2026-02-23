@@ -1,0 +1,38 @@
+:root{--lava-orange:#FF4500;--lava-red:#8B0000;--lava-dark:#0A0000;--lava-text:#FFFFFF;--lava-muted:#FF8855}
+*{margin:0;padding:0;box-sizing:border-box}
+body.theme-lava{background:var(--lava-dark);color:var(--lava-text);font-family:'Noto Sans JP',sans-serif;overflow-x:hidden}
+.lava-bg{position:fixed;inset:0;background:linear-gradient(135deg,#1a0000,var(--lava-red),var(--lava-orange));background-size:400%400%;animation:lava-flow 8s ease-in-out infinite;z-index:0;opacity:.8}
+@keyframes lava-flow{0%,100%{background-position:0%50%}50%{background-position:100%50%}}
+.ember-container{position:fixed;inset:0;pointer-events:none;z-index:1}
+.ember{position:absolute;bottom:0;width:4px;height:4px;background:var(--lava-orange);border-radius:50%;box-shadow:0 0 10px var(--lava-orange);animation:ember-rise 3s ease-out forwards}
+@keyframes ember-rise{0%{transform:translateY(0);opacity:1}100%{transform:translateY(-100vh);opacity:0}}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 0;background:rgba(0,0,0,.9);border-bottom:2px solid var(--lava-orange)}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--lava-text);font-family:'Rubik Mono One',sans-serif;font-size:1.5rem}
+.brand i{color:var(--lava-orange);font-size:1.75rem}
+.main-nav ul{display:flex;gap:2rem;list-style:none}
+.main-nav a{color:var(--lava-muted);text-decoration:none;font-family:'Rubik Mono One',sans-serif;font-size:.875rem;transition:color .3s}
+.main-nav a:hover{color:var(--lava-orange)}
+.hero-section{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;z-index:10;background:radial-gradient(circle at center,rgba(255,69,0,.3),transparent 70%)}
+.hero-content{text-align:center}
+.hero-badge{display:inline-block;padding:.5rem 1.5rem;border:2px solid var(--lava-orange);color:var(--lava-orange);font-family:'Rubik Mono One',sans-serif;font-size:.875rem;margin-bottom:2rem}
+.hero-title{font-family:'Rubik Mono One',sans-serif;font-size:clamp(3rem,12vw,8rem);line-height:.9;margin-bottom:1rem;text-shadow:0 0 40px var(--lava-orange)}
+.hero-title span{color:var(--lava-orange)}
+.hero-subtitle{color:var(--lava-muted);letter-spacing:.2em;margin-bottom:3rem}
+.btn-lava{display:inline-block;padding:1rem 3rem;background:var(--lava-orange);color:#fff;text-decoration:none;font-family:'Rubik Mono One',sans-serif;letter-spacing:.1em;border:none;cursor:pointer;transition:all .3s;box-shadow:0 0 30px var(--lava-orange)}
+.btn-lava:hover{background:#FF6600;box-shadow:0 0 50px var(--lava-orange);transform:scale(1.05)}
+.section{padding:6rem 2rem;position:relative;z-index:10}
+.section-container{max-width:1000px;margin:0 auto}
+.section-title{font-family:'Rubik Mono One',sans-serif;font-size:1.75rem;margin-bottom:3rem;padding-left:1rem;border-left:4px solid var(--lava-orange)}
+.volcano-stats{display:flex;justify-content:center;gap:4rem;flex-wrap:wrap}
+.stat{text-align:center}
+.num{display:block;font-family:'Rubik Mono One',sans-serif;font-size:clamp(3rem,10vw,6rem);color:var(--lava-orange);text-shadow:0 0 20px var(--lava-orange)}
+.sched-list{display:flex;flex-direction:column;gap:1rem}
+.sched-item{display:flex;align-items:center;gap:2rem;padding:1.5rem;background:rgba(0,0,0,.5);border-left:4px solid var(--lava-orange);transition:all .3s}
+.sched-item:hover{background:rgba(255,69,0,.1);transform:translateX(10px)}
+.sched-item span:first-child{font-family:'Rubik Mono One',sans-serif;color:var(--lava-orange);min-width:120px}
+.sched-item .live{color:var(--lava-orange);border:1px solid var(--lava-orange);padding:.25rem .75rem;font-size:.75rem}
+.site-footer{padding:3rem 2rem;text-align:center;border-top:1px solid var(--lava-orange);background:rgba(0,0,0,.8)}
+.site-footer p{font-family:'Rubik Mono One',sans-serif;color:var(--lava-muted);font-size:.875rem;letter-spacing:.3em}
+@media(max-width:768px){.main-nav ul{display:none}.hero-title{font-size:clamp(2rem,10vw,4rem)}.volcano-stats{flex-direction:column;gap:2rem}.sched-item{flex-direction:column;align-items:flex-start;gap:.5rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
